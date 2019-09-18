@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+    <p>Nhap can nang</p>
+    <input id="wieght" type="text">
+    <p>Nhap chieu cao</p>
+    <input id="hight" type="next">
+    <h3>Result</h3>
+    <p id="ketqua"></p>
+    <button type="button" onclick="comment()">Click me!</button>
+
+</form>
+<body>
+<script>
+    // var wieght = document.getElementById("wieght");
+    // var hight  = document.getElementById("hight");
+    // var bmi=0;
+
+    function comment() {
+        var wieght = document.getElementById("wieght");
+        var hight  = document.getElementById("hight");
+
+        wieght = parseInt(wieght);
+        hight = parseInt(hight);
+        var bmi;
+        bmi = (wieght.value)/(hight.value*hight.value);
+        if(bmi<18.5)
+            document.getElementById("ketqua").innerText='Underwieght';
+        else if(bmi<25.0)
+            document.getElementById("ketqua").innerText= 'Normal';
+        else if(bmi<30.0)
+            document.getElementById("ketqua").innerText='Overwieght';
+        else
+            document.getElementById("ketqua").innerText='Obese';
+    }
+</script>
+
+</body>
+</html>

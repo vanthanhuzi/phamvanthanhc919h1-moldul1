@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+    <button type="button" onclick="login()">Login!</button>
+    <input id="vanthanhpham" type="next">
+</form>
+<body>
+<script>
+    function login(){
+        var browser = document.getElementById("vanthanhpham");
+
+        switch (browser) {
+            case'Edge': document.getElementById("vanthanhpham").innerText="You've got the Edge!";
+            break;
+            case'Chrome':
+            case 'Firefox':
+            case 'Safari':
+            case 'Opera':
+                document.getElementById("vanthanhpham").innerText='Okay we support these browsers too';
+                break;
+            default: document.getElementById("vanthanhpham").innerText='We hope that this page looks ok!';
+        }
+
+
+    }
+
+</script>
+</body>
+</html>

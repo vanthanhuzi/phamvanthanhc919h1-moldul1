@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+    <h3>Điểm môn lý</h3>
+    <input id="diemly" type="text">
+    <h3>Điểm môn hóa</h3>
+    <input id="diemhoa" type="text">
+    <h3>Điểm môn sinh</h3>
+    <input id="diemsinh" type="text">
+    <input  type="button" onclick="diemtong()" value="TinhTong">
+    <p id="tong"></p>
+    <input  type="button" onclick="diemtrungbinh()" value="TrungBinh">
+    <p id="trungbinh"></p>
+
+</form>
+<body>
+<script>
+    var diemly = document.getElementById("diemly");
+    var diemhoa = document.getElementById("diemhoa");
+    var diemsinh = document.getElementById("diemsinh");
+    var result = 0;
+    function diemtong() {
+        result = diemly.value*1 + diemhoa.value*1 + diemsinh.value*1;
+        document.getElementById("tong").innerText = result;
+
+    }
+    function diemtrungbinh() {
+        result = (diemly.value*1 + diemhoa.value*1 + diemsinh.value*1)/3
+        document.getElementById("trungbinh").innerText = result;
+
+    }
+</script>
+
+
+</body>
+</html>

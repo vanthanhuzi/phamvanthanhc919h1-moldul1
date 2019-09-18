@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<form style="background-color: blueviolet">
+    <input id="YourName" type="text">
+    <button type="button" onclick="userName()">Login</button>
+    <p id="reply" type="next"></p>
+    <input id="passYourself" type="password">
+    <button type="button" onclick="passWord()">Password</button>
+    <p id="Continue"></p>
+</form>
+<script>
+
+    function userName() {
+        var name1 = document.getElementById("YourName").value;
+
+        console.log(name1 + "abc")
+        if (name1 === "Admin") {
+            document.getElementById("reply").innerText = "PassYourself is";
+            passWord();
+
+        } else if (name1 === "null") {
+            document.getElementById("reply").innerText = "canceled";
+        } else {
+            document.getElementById("reply").innerText = "I don't you know!"
+        }
+    }
+
+    function passWord() {
+        var password1 = document.getElementById("passYourself").value;
+        if (password1 === "TheMaster") {
+            document.getElementById("Continue").innerText = " Welcome";
+        }
+        else if (password1 === "null") {
+            document.getElementById("Continue").innerText = "Canceled";
+        } else {
+            document.getElementById("Continue").innerText = "Wrong password";
+        }
+
+    }
+</script>
+
+</body>
+</html>

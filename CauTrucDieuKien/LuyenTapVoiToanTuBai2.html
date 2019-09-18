@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+
+    <input id="cc" type="text" />
+<button type="button" onclick="nhapvao()">Login</button>
+    <p id="hihi"></p>
+</form>
+<body>
+<script>
+
+    function nhapvao() {
+        var login = document.getElementById("cc").value;
+        var message;
+        message=(login==='Employee')?
+            'Hello':
+            (login ==='Director') ?
+                'Greetings' :
+                (login === '') ?
+                    'No login' :
+                    '';
+        document.getElementById("hihi").innerText= message;
+    }
+</script>
+</body>
+</html>

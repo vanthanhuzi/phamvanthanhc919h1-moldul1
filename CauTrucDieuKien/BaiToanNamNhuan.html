@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form style="background-color: darkmagenta">
+<!--    <h>Year</h>-->
+    <igm src="Year.jpg" alt="Year.com" width="104" hieght="142">
+    <p id="WhatIsYear"></p><br>
+    <input id="InputYear" type="number">
+    <input  type="button" onclick="examition()" value="ThisIsAYear">
+</form>
+
+    <body>
+    <script>
+        function examition()
+
+        {
+            var AYear = parseInt(document.getElementById("InputYear").value);
+            console.log(AYear+ 'abc')
+            if( AYear%4===0 && AYear%100===0) {
+
+                document.getElementById("WhatIsYear").innerText = "NamNhuan";
+            }
+
+            if(AYear%100===0 && AYear%400===0){
+                document.getElementById("WhatIsYear").innerText = "NamNhuan";
+            }
+            else{
+                document.getElementById("WhatIsYear").innerText = "KhongPhaiNamNhuan";
+            }
+
+        }
+        </script>
+    </body>
+
+
+</body>
+</html>

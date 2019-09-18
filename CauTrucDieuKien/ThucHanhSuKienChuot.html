@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+    <img src="trai_bong_15917916.jpg" id="aball">
+    <p>Click button below to move image to right</p>
+    <button type="button" onclick="moveRight()">Click me!</button>
+</form>
+<body>
+<script>
+    var roundball = null;
+    function object() {
+
+        roundball=document.getElementById("aball");
+        roundball.style.position='relative';
+        roundball.style.left='0px';
+    }
+    function moveRight() {
+
+
+        roundball.style.left=parseInt(roundball.style.left) + 10 + 'px';
+    }
+
+    window.onload = object;
+
+
+</script>
+
+</body>
+</html>

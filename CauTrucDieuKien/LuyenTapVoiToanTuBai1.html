@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+    <p>Nhap vao a</p>
+    <input id="numbera" type="next">
+    <P>Nhap vao b</P>
+    <input id="numberb" type="next">
+    <button type="button" onclick="tinhtong()">Addition</button>
+    <p id="hihi"></p>
+</form>
+<body>
+<script>
+    var a = document.getElementById("numbera");
+    var b = document.getElementById("numberb");
+    function tinhtong() {
+        if((a.value*1+b.value*1)<4){
+            document.getElementById("hihi").innerText= "Below";
+        }
+        else{
+            document.getElementById("hihi").innerText= "Over";
+        }
+
+    }
+
+
+</script>
+
+</body>
+</html>
