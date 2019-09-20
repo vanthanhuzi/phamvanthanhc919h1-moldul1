@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+    <input type="button" onclick="countnumber()" value="click!">
+    <p>nhap so</p>
+    <input id="number">
+
+    <P id="songuyento"></P>
+</form>
+<body>
+<script>
+    function countnumber() {
+        console.log('abc')
+        // kt_SoNguyento(snt);
+
+        var count=0;
+        var number =parseInt( document.getElementById("number").value);
+
+        var text="";
+
+        for (var snt=2;;snt++)
+        {
+            if(kt_SoNguyento(snt)){
+                count++;
+                text+= snt + "<br/>";
+            }
+            if(count===number){
+                break;
+            }
+        }
+        // // while(true){
+        // //     if (kt_SoNguyento(snt)) {
+        // //         count++;
+        // //         text += snt + "<br/>";
+        // //     }
+        // //
+        // //     if(count===number*1){
+        // //         break;
+        // //     }
+        // //     snt++;
+        // }
+        document.getElementById("songuyento").innerHTML = text;
+    }
+   function kt_SoNguyento(snt) {
+        var kt=true;
+       if (snt<2)
+           kt=false;
+       else{
+       for(var i=2;i<=(snt-1);i++) {
+           if (snt % i === 0 && snt > 2) {
+               kt = false;
+               break;
+           }
+       }
+       }
+       return kt;
+   }
+
+
+
+
+
+</script>
+</body>
+</html>

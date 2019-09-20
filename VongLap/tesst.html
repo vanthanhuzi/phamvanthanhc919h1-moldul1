@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the full year of todays date.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var i = "09/09/1990";
+        var d = new Date(i).getFullYear();
+
+        document.getElementById("demo").innerHTML = d;
+    }
+</script>
+
+</body>
+</html>

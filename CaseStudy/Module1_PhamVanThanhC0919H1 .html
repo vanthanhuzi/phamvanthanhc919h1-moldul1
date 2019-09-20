@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+    <p>1. Name</p>
+    <input id="name">
+    <p>2.ID card Number</p>
+    <input id="idcard">
+    <p>3. Birth of day/month/year</p>
+    <input id="birth">
+    <p>4. Email</p>
+    <input id="email">
+    <p>5. Address</p>
+    <input id="address">
+
+
+    <!--    <p>6.Reduce price</p>-->
+    <!--    <input id="reduce">-->
+
+    <p>7.RentDay</p>
+    <input id="day"><br>
+
+    <select id="typecustomer" onsort="customer()">
+        <option disabled selected>8. Type of customer</option>
+        <option value="15">Diamond</option>
+        <option value="10">Platinum</option>
+        <option value="5">Gold</option>
+        <option value="2">Silver</option>
+        <option value="0">Member</option>
+    </select>
+
+    <select id="price" onsort="price()">
+        <option disabled selected>9.Type of service</option>
+        <option value="500">Villa: 500$/day</option>
+        <option value="300">House: 300$/day</option>
+        <option value="100">Room: 100$/day</option>
+    </select><br>
+
+    <select id="type" onsort="type()">
+        <option disabled selected>10.type of rentRoom</option>
+        <option value="Vip">Vip</option>
+        <option value="Business">Business</option>
+        <option value="Normal">Normal</option>
+    </select>
+    <button type="button" onclick="result()">Result</button>
+    <P id="ten">1</P>
+    <p id="cmnd">2</p>
+    <p id="ngaysinh">3</p>
+    <p id="mail">4</p>
+    <p id="diachi">5</p>
+    <!--    <p id="giamgia">6</p>-->
+    <p id="ngaythue">7</p>
+    <p id="typecustomrr">8</p>
+    <p id="pricee">9</p>
+    <p id="typee">10</p>
+    <P>The money have to pay</P>
+    <p id="pay"></p>
+
+
+</form>
+<body>
+<script>
+    function result() {
+        let name = document.getElementById("name").value;
+        let idcard = document.getElementById("idcard").value;
+        let birth = document.getElementById("birth").value;
+        let email = document.getElementById("email").value;
+        let address = document.getElementById("address").value;
+        // let reduce = document.getElementById("reduce").value;
+        let rentday = parseInt(document.getElementById("day").value);
+        let reduce;
+        reduce = countAddress() + ngaythue() + yearOld() + customer();
+        console.log(reduce);
+        let total;
+        total = price() * rentday * (1 - reduce / 100);
+        document.getElementById("pay").innerText = total;
+
+        document.getElementById("ten").innerText = name;
+        document.getElementById("cmnd").innerText = idcard;
+        document.getElementById("ngaysinh").innerText = birth;
+        document.getElementById("mail").innerText = email;
+        document.getElementById("diachi").innerText = address;
+        document.getElementById("giamgia").innerText = reduce;
+        document.getElementById("ngaythue").innerText = rentday;
+        type();
+        // yearOld()
+    }
+
+    function customer() {
+        let typecustomer = parseInt(document.getElementById("typecustomer").value);
+        document.getElementById("typecustomrr").innerText = typecustomer;
+        console.log(typecustomer);
+        return typecustomer;
+    }
+
+    function price() {
+        let b = document.getElementById("price").value;
+        document.getElementById("pricee").innerText = b;
+        return b;
+    }
+
+    function type() {
+        document.getElementById("typee").innerText = document.getElementById("type").value
+    }
+
+    // function totalpay() {
+    //     var total=0;
+    //     total=
+
+    function countAddress() {
+        var giamgia1;
+        var diachi = document.getElementById("address").value;
+        switch (diachi) {
+            case "Huế":
+                giamgia1 = 10;
+                break;
+            case "Đà Nẵng":
+                giamgia1 = 20;
+                break;
+            case "Quảng Nam":
+                giamgia1 = 5;
+                break;
+            default:
+                giamgia1 = 0;
+        }
+        console.log("giamgia1 " + giamgia1);
+        return giamgia1;
+    }
+
+    function ngaythue() {
+        var giamgia2;
+        var rentday = parseInt(document.getElementById("day").value);
+        if (rentday >= 7) {
+            giamgia2 = 30;
+        } else if (rentday >= 5)
+            giamgia2 = 20;
+        else if (rentday >= 2) giamgia2 = 10;
+        console.log("giamgia2 " + giamgia2);
+        return giamgia2;
+
+    }
+
+    function yearOld() {
+        var giamgia3;
+        let currentYear = new Date().getFullYear();
+        let birthday = new Date(birth).getFullYear();
+        let ageCustomer = currentYear - birthday;
+        var diachi = document.getElementById("address").value;
+        if (ageCustomer > 30 && diachi === "Đà Nẵng") {
+            giamgia3 = 2;
+        } else if (ageCustomer >= 20 && diachi === "Đà Nẵng") {
+            giamgia3 = 1;
+        } else giamgia3 = 0;
+        console.log("giamgia3 " + giamgia3);
+        return giamgia3;
+
+
+    }
+
+</script>
+
+</body>
+</html>
