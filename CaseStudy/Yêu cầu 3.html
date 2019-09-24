@@ -46,6 +46,7 @@
     <p id="cmnd">2</p>
     <p id="ngaysinh">3</p>
     <p id="mail">4</p>
+
     <p id="diachi">5</p>
     <!--    <p id="giamgia">6</p>-->
     <p id="ngaythue">7</p>
@@ -54,8 +55,11 @@
     <p id="typee">10</p>
     <P>The money have to pay</P>
     <p id="pay"></p>
-
-
+    <button type="button" onclick="checkAll()">check email</button>
+    <p id="checkemail">Note1</p>
+    <p id="checkIdCard">Note2</p>
+    <p id="checkbirthDay">Note3</p>
+    <p id="standardname">Note4</p>
 </form>
 <body>
 <script>
@@ -65,24 +69,23 @@
         let birth = document.getElementById("birth").value;
         let email = document.getElementById("email").value;
         let address = document.getElementById("address").value;
-        // let reduce = document.getElementById("reduce").value;
         let rentday = parseInt(document.getElementById("day").value);
         let reduce;
         reduce = countAddress() + ngaythue() + yearOld() + customer();
         console.log(reduce);
         let total;
         total = price() * rentday * (1 - reduce / 100);
-        document.getElementById("pay").innerText = total;
-
+        
         document.getElementById("ten").innerText = name;
         document.getElementById("cmnd").innerText = idcard;
         document.getElementById("ngaysinh").innerText = birth;
         document.getElementById("mail").innerText = email;
         document.getElementById("diachi").innerText = address;
-        document.getElementById("giamgia").innerText = reduce;
         document.getElementById("ngaythue").innerText = rentday;
+        document.getElementById("pay").innerText = total;
         type();
-        // yearOld()
+
+
     }
 
     function customer() {
@@ -101,10 +104,6 @@
     function type() {
         document.getElementById("typee").innerText = document.getElementById("type").value
     }
-
-    // function totalpay() {
-    //     var total=0;
-    //     total=
 
     function countAddress() {
         var giamgia1;
@@ -152,10 +151,92 @@
         } else giamgia3 = 0;
         console.log("giamgia3 " + giamgia3);
         return giamgia3;
-
-
+    }
+    function checkAll() {
+        checkgmail();
+        checkIdCard();
+        checkBirthday();
+        standardDataCustomer();
     }
 
+    function checkgmail() {
+        var check = true;
+        var chekEmail = document.getElementById("email").value;
+        var countDot = 0;
+        var countAt = 0;
+        do {
+            for (var i = 0; i < chekEmail.length; i++) {
+                if (chekEmail.charAt(i) === ".") {
+                    countDot++;
+                }
+                if (chekEmail.charAt(i) === "@") {
+                    countAt++;
+                }
+                check = true;
+            }
+        } while (!check)
+        if (countDot < 1 || countAt !== 1) {
+            document.getElementById("checkemail").innerText = "Email is invalid!!! You Try Again";
+        } else document.getElementById("checkemail").innerText = "Your Email is valid!"
+    }
+    function checkIdCard() {
+        var checkIdCard= document.getElementById("idcard").value;
+        if(!isNaN(checkIdCard)){
+            checkIdCard=Number.parseFloat(checkIdCard);
+            if (Number.isInteger(checkIdCard)){
+                document.getElementById("checkIdCard").innerText= "IdCard is valid"
+            }
+            else  document.getElementById("checkIdCard").innerText= "Id card is not valid";
+
+        }
+
+    }
+    function checkBirthday() {
+        var checkBirthday= document.getElementById("birth").value;
+        var check1=true;
+        do{
+            if (checkBirthday.charAt(2)!=="/"||checkBirthday.charAt(5)!=="/"){
+                document.getElementById("checkbirthDay").innerText="Birthday is invalid!!! You Try Again";
+                continue;
+            }
+
+            var month = checkBirthday.substring(0,2);
+            var day = checkBirthday.substring(3,5);
+            var year = checkBirthday.substring(6,10);
+            if(!isNaN(month)&& !isNaN(day) &&!isNaN(year)){
+                day =Number.parseFloat(day);
+                month =Number.parseFloat(month);
+                year =Number.parseFloat(year);
+                if(Number.isInteger(month) && Number.isInteger(day) && Number.isInteger(year)){
+                    if(day<32 && day>0 && month>0 && month<13 && year>0){
+                        document.getElementById("checkbirthDay").innerText="Birthday is valid"
+                    }
+                    else document.getElementById("checkbirthDay").innerText="Birthday is invalid!!! You Try Again";
+                }
+            }
+            check1=true;
+
+        }while(!check1)
+    }
+   function standardDataCustomer() {
+        var nameCustomer = document.getElementById("name").value;
+        var standardName = "";
+        nameCustomer.trim().toLocaleLowerCase();
+        for(var i=0;i<nameCustomer.length;i++){
+            if(nameCustomer.charAt(i)===" "&& nameCustomer.charAt(i+1)===" "){
+                continue;
+            }
+            if(i===0 || nameCustomer.charAt(i-1)===" "){
+                standardName+= nameCustomer.charAt(i).toLocaleUpperCase();
+                continue;
+            }
+             standardName+=nameCustomer.charAt(i);
+        }
+        nameCustomer=standardName;
+        document.getElementById("standardname").innerText= nameCustomer;
+
+
+   }
 </script>
 
 </body>
