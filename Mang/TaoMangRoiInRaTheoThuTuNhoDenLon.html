@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
+<form>
+    <input id="nhapmang">
+    <input type="button" onclick="addelement()" value="add">
+    <input type="button" onclick="displayelement()" value="display">
+    <p id="displayelement"></p>
+    <input type="button" onclick="sapxep()" value="dispose">
+    <p id="sapxep"></p>
+</form>
 <body>
-$END$
+<script>
+    var array = [];
+    var x = 0;
+    function addelement() {
+        array[x]= document.getElementById("nhapmang").value;
+        x++;
+    }
+    function displayelement() {
+        document.getElementById("displayelement").innerHTML= array;
+    }
+    function sapxep() {
+        var min=0;
+        for(var i=0;i<array.length;i++){
+                min=i;
+
+
+        for(var j=i+1;j<array.length;j++) {
+            if(array[min]>array[j]){
+                min=j;
+            }
+        }
+        var temp= array[i];
+            array[i]=array[min];
+            array[min]=temp;
+        }
+        document.getElementById("sapxep").innerHTML=array;
+
+    }
+
+</script>
 </body>
 </html>

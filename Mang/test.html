@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    var points = [40, 100, 1, 5, 25, 10];
+    for (var i=points.length-1;i>=0;i--) {
+        for (var j =0; j <=i; j++) {
+            if(points[j]>points[j+1]){
+                var b=points[j+1];
+                points[j+1]=points[j];
+                points[j]=b;
+            }
+
+        }
+
+    }
+
+    document.write(a);
+
+
+
+
+</script>
 </body>
 </html>

@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    var arr = [1,3,5,7,5,2,8,7]
+    let minIndex, temp,
+        len = arr.length;
+
+    for (let i = 0; i < len; i++) {
+        minIndex = i;
+        // tìm index của giá trị nhỏ nhất
+        for (let  j = i+1; j < len; j++) {
+            if(arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        // Đổi chỗ
+        temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+    document.write(arr);
+</script>
 </body>
 </html>
