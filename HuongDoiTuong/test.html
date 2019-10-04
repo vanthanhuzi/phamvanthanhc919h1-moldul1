@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+    <canvas id="circle" width="1368opx" height="768px" style="border: 1px"></canvas>
+
+</form>
+<body>
+<script>
+   function Aye() {
+      this.y = function (y) {
+          this.y = y;
+      };
+      this.x = function (x) {
+          this.x = x;
+      };
+      this.z = function (z) {
+          this.m = z
+      }
+    }
+
+    function getRandomHex(){
+        return Math.floor(Math.random()*255);
+    }
+
+    function getRandomColor(){
+        var re = getRandomHex();
+        var green = getRandomHex();
+        var blue = getRandomHex();
+        return "rgb(" + re + "," + blue + "," + green +")";
+
+    }
+    function creatCircle() {
+        var x = Math.random() * window.innerWidth;
+        var y = Math.random() * window.innerWidth;
+        var z = Math.floor(Math.random() * 8);
+        var aaa = new Aye();
+        var color = getRandomColor();
+        var circle = document.getElementById("circle").getContext("2d");
+        circle.beginPath();
+        circle.arc(aaa.x(x), aaa.y(y), aaa.z(z),0, 2 * Math.PI);
+        circle.fillStyle = color;
+        circle.fill();
+    }
+
+    function multiple() {
+        for (var i = 0; i < 10; i++) {
+            creatCircle();
+        }
+    }
+    multiple();
+
+</script>
+</body>
+</html>

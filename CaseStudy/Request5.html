@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+</form>
+<script>
+
+
+    let arrListCustomers2 = [];
+
+
+    function displayMainMenu() {
+        let menu = prompt("1. Add New Customer" + "\n2.Display Information Customer." + "\n3.Edit Information Customer" + "\n4.Delete Customer" + "\n5.Exit.");
+
+        switch (menu) {
+            case "1":
+
+                addNewCustomer();
+                break;
+            case "2":
+
+                displayCustomer();
+                break;
+            case "3":
+                editInformationCustomer();
+                break;
+            case "4":
+                deletedCustomer();
+                break;
+
+            default:
+                displayMainMenu();
+        }
+
+    }
+
+    function edit(edit) {
+        let choose = prompt("1.Name" + arrListCustomers2[edit][0]
+            + "\n2.Address" + arrListCustomers2[edit][1]
+            + "\n3.Birthday" + arrListCustomers2[edit][2]
+            + "\n4.Id card" + arrListCustomers2[edit][3]
+            + "\n5.Email" + arrListCustomers2[edit][4]
+            + "\n6.Type Customer" + arrListCustomers2[edit][5]
+            + "\n7.Rent Day" + arrListCustomers2[edit][6]);
+        switch (choose) {
+            case "1":
+                arrListCustomers2[edit][0] = prompt("Name you want exchange is : ");
+                break;
+            case "2":
+                arrListCustomers2[edit][1] = prompt("Address you want exchange is : ");
+                break;
+            case "3":
+                arrListCustomers2[edit][2] = prompt("Birthday you want exchange is : ");
+                break;
+            case "4":
+                arrListCustomers2[edit][3] = prompt("Id card you want exchange is : ");
+                break;
+            case "5":
+                arrListCustomers2[edit][4] = prompt("Type Customer you want exchange is : ");
+                break;
+            case "6":
+                arrListCustomers2[edit][5] = prompt("Rent Day you want exchange is : ");
+                break;
+
+
+            default:
+                editInformationCustomer();
+                alert("fail!!");
+        }
+        editInformationCustomer();
+    }
+
+    function DisplayInformationCustomer(index) {
+        alert("1.Name" + arrListCustomers2[index][0]
+            + "\n2.Address" + arrListCustomers2[index][1]
+            + "\n3.Birthday" + arrListCustomers2[index][2]
+            + "\n4.Id card" + arrListCustomers2[index][3]
+            + "\n5.Email" + arrListCustomers2[index][4]
+            + "\n6.Type Customer" + arrListCustomers2[index][5]
+            + "\n7.Rent Day" + arrListCustomers2[index][6]);
+        displayMainMenu();
+    }
+
+    function editInformationCustomer() {
+        let result = "";
+        for (let i = 0; i < arrListCustomers2.length; i++) {
+            result += "Customer." + (i + 1) + "\n" + "1.Name" + arrListCustomers2[i][0]
+                + "  2.Id card" + arrListCustomers2[i][3] + "\n";
+        }
+        let option1 = parseInt(prompt(result));
+
+        if (1 <= option1 && option1 <= arrListCustomers2.length) {
+            edit(option1 - 1);
+        } else {
+            displayMainMenu();
+        }
+    }
+
+    function displayCustomer() {
+        let result = "";
+        for (let i = 0; i < arrListCustomers2.length; i++) {
+            result += "Customer." + (i + 1) + "\n" + "1.Name" + arrListCustomers2[i][0]
+                + "  2.Id card" + arrListCustomers2[i][3] + "\n";
+        }
+
+        let option = parseInt(prompt(result));
+
+        if (1 <= option && option <= arrListCustomers2.length) {
+            DisplayInformationCustomer(option - 1);
+        } else
+
+            displayMainMenu();
+    }
+
+    function addNewCustomer() {
+        let arrListCustomers1 = [];
+        let name = prompt("1.Name");
+        let address = prompt("2.Address");
+        let birthday = prompt("3.Birthday");
+        let idCard = prompt("4.Id card");
+        let email = prompt("5.Email");
+        let typeCustomer = prompt("6.Type Customer");
+        let rentDay = prompt("7.Rent Day");
+        arrListCustomers1.push(name);
+        arrListCustomers1.push(address);
+        arrListCustomers1.push(birthday);
+        arrListCustomers1.push(idCard);
+        arrListCustomers1.push(email);
+        arrListCustomers1.push(typeCustomer);
+        arrListCustomers1.push(rentDay);
+        arrListCustomers2.push(arrListCustomers1);
+        displayMainMenu();
+    }
+    function deletedCustomer() {
+        let result = "";
+        for (let i = 0; i < arrListCustomers2.length; i++) {
+            result += "Customer." + (i + 1) + "\n" + "1.Name" + arrListCustomers2[i][0]
+                + "  2.Id card" + arrListCustomers2[i][3] + "\n";
+        }
+        let deleted = parseInt(prompt(result));
+        for (let j = 0; j < arrListCustomers2.length; j++) {
+            if (deleted === (j + 1)) {
+                let answer = prompt("Are you sure deleted?"+
+                "\n1. Yes"+"\n2. No");
+                if(answer==="1") {
+                    arrListCustomers2.splice(j, 1);
+                    deletedCustomer();
+
+                }
+                else
+                deletedCustomer();
+            } else displayMainMenu();
+        }
+        displayMainMenu();
+    }
+
+
+
+    displayMainMenu();
+    // addNewCustomer();
+    // DisplayInformationCustomer();
+</script>
+</body>
+</html>

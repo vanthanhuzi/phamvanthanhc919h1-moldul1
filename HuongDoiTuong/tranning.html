@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+
+
+</head>
+<body>
+<script>
+    let n = prompt("nhap vao so n:");
+    let array = [];
+    for (let i = 0; i < n ; i ++){
+        if(i>=0){
+            array[i]=i;
+        }
+        if(i>1){
+            array[i]=i-1;
+        }
+        if(i>2){
+            array[i]=array[i-1]+array[i-2];
+
+        }
+    }
+    alert(array);
+</script>
+
+
+</body>
+
+
+
+</html>

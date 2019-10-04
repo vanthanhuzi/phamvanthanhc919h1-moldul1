@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70bfd5b0-ab81-4cd1-a588-ddde71c0ba22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Yêu cầu 3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Mang/CoCaRoDonGian.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Mang/TaoMangRoiInRaTheoThuTuNhoDenLon.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Mang/ThucHanhTaoVaThaoTacVoiMang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Mang/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Mang/vanthan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Customer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MethodRunCustomer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Request5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Request6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Request4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/ThucHanhTaoVaGoiHam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HuongDoiTuong/ThucHanhXayDungLopDate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HuongDoiTuong/XayDungLopHinhTron.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module1_PhamVanThanhC0919H1 .html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1_PhamVanThanhC0919H1 .html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CauTrucDieuKien/BaiToanNamNhuan.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CauTrucDieuKien/BaiToanNamNhuan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CauTrucDieuKien/ThucHanhSuKienBanPhim.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CauTrucDieuKien/ThucHanhSuKienBanPhim.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mang/TaoMangRoiInRaTheoThuTuNhoDenLon.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Mang/TaoMangRoiInRaTheoThuTuNhoDenLon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NhapMonLapTrinhCanBan" beforeDir="false" afterPath="$PROJECT_DIR$/../NhapMonLapTrinhCanBan" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../VongLap/BaiTapInRaSoNguyenTo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../VongLap/BaiTapInRaSoNguyenTo.html" afterDir="false" />
     </list>
@@ -25,28 +30,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Module1_PhamVanThanhC0919H1 .html">
+        <entry file="file://$PROJECT_DIR$/Request4task2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="32" selection-end-line="161" selection-end-column="7" />
+            <state relative-caret-position="48">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Yêu cầu 3.html">
+        <entry file="file://$PROJECT_DIR$/Request5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="231" column="13" lean-forward="true" selection-start-line="231" selection-start-column="13" selection-end-line="231" selection-end-column="13" />
+            <state relative-caret-position="219">
+              <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../VongLap/BaiTapInRaSoNguyenTo.html">
+        <entry file="file://$PROJECT_DIR$/Customer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="352">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Request6.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MethodRunCustomer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../HuongDoiTuong/Run.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -57,6 +89,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -80,6 +113,11 @@
         <option value="$PROJECT_DIR$/Module1_PhamVanThanhC0919H1 .html" />
         <option value="$PROJECT_DIR$/../VongLap/BaiTapInRaSoNguyenTo.html" />
         <option value="$PROJECT_DIR$/Yêu cầu 3.html" />
+        <option value="$PROJECT_DIR$/Request5.html" />
+        <option value="$PROJECT_DIR$/Request6.html" />
+        <option value="$PROJECT_DIR$/Customer.js" />
+        <option value="$PROJECT_DIR$/MethodRunCustomer.js" />
+        <option value="$PROJECT_DIR$/../HuongDoiTuong/ThucHanhXayDungLopDate.html" />
       </list>
     </option>
   </component>
@@ -115,7 +153,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VongLap/BaiTapInRaSoNguyenTo.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HuongDoiTuong/Run.js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -158,12 +196,16 @@
       <workItem from="1569119318660" duration="692000" />
       <workItem from="1569252894749" duration="3990000" />
       <workItem from="1569287685207" duration="9860000" />
-      <workItem from="1569311698368" duration="4718000" />
+      <workItem from="1569311698368" duration="5967000" />
+      <workItem from="1570115640937" duration="12086000" />
+      <workItem from="1570151685507" duration="10868000" />
+      <workItem from="1570176059359" duration="10245000" />
+      <workItem from="1570193624410" duration="5877000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90248000" />
+    <option name="totallyTimeSpent" value="130573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -238,24 +280,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module1_PhamVanThanhC0919H1 .html">
+    <entry file="file://$PROJECT_DIR$/../VongLap/BaiTapInRaSoNguyenTo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="32" selection-end-line="161" selection-end-column="7" />
+        <state relative-caret-position="171">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../VongLap/BaiTapInRaSoNguyenTo.html">
+    <entry file="file://$PROJECT_DIR$/Module1_PhamVanThanhC0919H1 .html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+        <state relative-caret-position="144">
+          <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Yêu cầu 3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="231" column="13" lean-forward="true" selection-start-line="231" selection-start-column="13" selection-end-line="231" selection-end-column="13" />
+        <state relative-caret-position="3760">
+          <caret line="235" column="72" selection-start-line="235" selection-start-column="72" selection-end-line="235" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../HuongDoiTuong/ThucHanhXayDungLopDate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Request4task2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../HuongDoiTuong/Run.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MethodRunCustomer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Request6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Customer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Request5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var array = [];
+    var i = 0;
+    var result="";
+    var a = prompt("1.Ad New Customer" + "\n2.Deleted Customer");
+    alert(a);
+    switch (a) {
+        case "1":
+            for (i = 0; i < 5; i++) {
+                array[i]=prompt((i+1)+".");
+                result+= (i+1)+ "."+array[i]+"\n";
+
+
+            }
+                alert(result);
+            break;
+        case "2":
+            for (i = 0; i < 5; i++) {
+                array[i]=prompt((i+1)+".");}
+
+            var b =parseInt( prompt("Do you want delete name?"));
+            array.splice(b-1,1);
+            for (i = 0; i< array.length; i++){
+            result+= (i+1)+"."+ array[i]+"\n";}
+            alert(result);
+            break;
+        default: alert("fail")
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<body>
+<form>
+    <input id="height" type="text" placeholder="Input hieght"/>
+    <input id="width" type="text" placeholder="Input width"/>
+    <input id="coordinateWidth" type="text" placeholder="Input Width Co-Ordinate"/>
+    <input id="coordinateHeigth" type="text" placeholder="Input Height Co-Ordinate"/>
+    <canvas id="myRectangle" width="600" height="400"  style="color: brown"></canvas>
+    <input type="button" onclick="drawRectangle()" value="Let's Draw">
+    <p id="area"></p>
+    <button type="button" onclick="area()">Area Value</button>
+
+</form>
+<script>
+    let Rectangle = function () {
+        this.setheight = function (height) {
+            this.height = height;
+        };
+        this.getheight = function () {
+            return this.height;
+        };
+        this.setWidth = function (width) {
+            this.width = width;
+        };
+        this.getWidth = function () {
+            return this.width;
+        };
+        this.setcoOrdinateWidth = function (x) {
+            this.coOrdinateWidth = x;
+        };
+        this.getcoOrdinateWidth = function () {
+            return this.coOrdinateWidth;
+        };
+        this.setcoOrdinateHeight = function (y) {
+            this.coOrdinateHeight = y;
+        };
+        this.getcoOrdinateHeight = function () {
+            return this.coOrdinateHeight;
+        };
+    };
+
+    let canvasRectangle = document.getElementById("myRectangle").getContext("2d");
+    let height = document.getElementById("height");
+    let width = document.getElementById("width");
+    let WidthCoOrdinate = document.getElementById("coordinateWidth");
+    let HeightCoOrdinate = document.getElementById("coordinateHeigth");
+    function drawRectangle() {
+        let rectangle = new Rectangle();
+        rectangle.setheight(height.value);
+        rectangle.setWidth(width.value);
+        rectangle.setcoOrdinateHeight(HeightCoOrdinate.value);
+        rectangle.setcoOrdinateWidth(WidthCoOrdinate.value);
+        canvasRectangle.fillRect(rectangle.getcoOrdinateWidth()*1, rectangle.getcoOrdinateHeight()*1, rectangle.getWidth()*1, rectangle.getheight()*1);
+        rectangle.fill();
+    }
+    function area() {
+        let  tong ;
+        tong = (height.value)*(width.value);
+        document.getElementById("area").innerText = tong;
+    }
+</script>
+</body>
+</html>

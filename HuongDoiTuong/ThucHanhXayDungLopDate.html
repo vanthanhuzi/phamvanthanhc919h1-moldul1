@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="aday" type="text" placeholder="New Day">
+<input id="amonth" type="text"  placeholder="New Month">
+<input id="ayear" type="text"  placeholder="New Year">
+<input onclick="newdate()" type="submit" value="Add a New Date">
+<input onclick="displayDate()" type="submit" value="Display a New Date">
+<P id="showList"></P>
+<script>
+
+var newDate=[];
+var aDay = document.getElementById("aday");
+var aMonth = document.getElementById("amonth");
+var aYear = document.getElementById("ayear");
+var result="";
+var i =0;
+function newdate() {
+    var aDate = new MyDate();
+    aDate.setday(aDay.value);
+    aDate.setMonth(aMonth.value);
+    aDate.setyear(aYear.value);
+    newDate.push(aDate);
+    aDay.value="";
+    aMonth.value="";
+    aYear.value="";
+}
+function displayDate() {
+    for (i = 0; i < newDate.length; i++) {
+        result+=+"A Date"+ (i+1)+ ":"+ newDate[i].getday() + "/"+ newDate[i].getmonth() +"/"+ newDate[i].getyear()+ "<br/>";
+    }
+    document.getElementById("showList").innerHTML= result;
+}
+</script>
+<script type="text/javascript" src=".idea/"></script>
+</body>
+</html>

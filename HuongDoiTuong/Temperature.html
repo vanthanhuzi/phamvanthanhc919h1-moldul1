@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let array = [];
+    let n = parseInt(prompt("nhap vao so: "));
+
+    for (let x = 0; x <= n; x++) {
+
+        if (x === 0) {
+            array = [0]
+        }
+        if (x ===1 ) {
+            array = [0, 1, 1];
+        }
+
+        for (let i = 0; i <= array.length; i++) {
+
+
+            if (x === (array[i - 1] + array[i - 2])) {
+                array[i] = x;
+            }
+
+        }
+
+    }
+    alert(array);
+
+</script>
+</body>
+</html>
